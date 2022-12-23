@@ -252,13 +252,13 @@ class _MyHomePageState extends State<MyHomePage> {
               onPressed: _onProcess
                   ? null
                   : () {
-                final _form =
+                final form =
                     _registerFormKey.currentState;
-                if (_form!.validate()) {
+                if (form!.validate()) {
                   setState(() {
                     _onProcess = true;
                   });
-                  _form.save();
+                  form.save();
                   var name = _userNameController.text;
                   var height = _heightController.text;
                   var weight = _weightController.text;
